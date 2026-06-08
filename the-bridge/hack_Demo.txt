@@ -1,8 +1,8 @@
 npx @modelcontextprotocol/inspector http://localhost:8000/sse
- uvicorn bridge:app --host 0.0.0.0 --port 8000
- python .\the-bridge\mcp_server.py
+uvicorn bridge:app --host 0.0.0.0 --port 8000
+python .\the-bridge\mcp_server.py
 streamlit run .\the-bridge\dashboard.py --server.port 8501 --server.address 0.0.0.0
-
+python generate_demo_urls.py
 
 
 (Recommended) Integrate the Blast Radius Simulator: Connect simulation_engine.py to FastAPI endpoints and add a visual Simulation tab in the Streamlit dashboard., Build the Async Log Scraper: Implement an asynchronous background worker that parses local log files and routes them to OpenSearch/Splunk., Connect OPA (Open Policy Agent) to a live server: Replace the mock OPA check with an HTTP client requesting policy decisions from a real OPA endpoint., No new features needed; just help me verify the current OpenSearch logs and PII Masker in the Inspector., Trust-Decay Engine, Schema Diff-Watch, Key Metrics & KPIs--> Unused Privilege Rate, Excessive Permission Rate, Recommendation Accuracy,Average Risk Score, Compliance Report Coverage, Simulation Accuracy, On-Demand Workflow (Human-Triggered), Insight Engine → Observability (Dashboards) Insight Metric Dashboard Visualization Unused privileges count Bar chart over time Excessive permissions Pie chart by department Risk scores by user Heatmap Recommendation queue Table with priority Compliance report status Status indicator , 4.2 Insight Engine → Execution Control (Auto-Revoke) Insight Recommendation Execution Action High-risk unused privilege Auto-revoke (if approved) Medium-risk unused privilege Flag for human review Low-risk unused privilege Log for quarterly audit, 4.1 Insight Engine → Policy Engine (Feedback Loop) Insight Output Policy Engine Action Unused privilege detected Suggest policy rule to revoke Excessive role detected Suggest policy rule to downgrade High-risk user detected Increase policy strictness for that user Low-risk user detected Decrease policy strictness (trust increase). All these fatures along with Blast Radius Siumator, Asynch Log Scraper, OPA check.. Opensearch Dashboard all these are required (write-in)
